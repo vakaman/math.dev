@@ -3,14 +3,14 @@ name: Deploy React to GitHub Pages
 on:
   push:
     branches:
-      - main  # 🔹 Altere se o branch principal for diferente de "main"
+      - main
 
 permissions:
   contents: write
 
 jobs:
   deploy:
-    runs-on: node:18-alpine
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout do repositório
