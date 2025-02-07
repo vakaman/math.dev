@@ -1,0 +1,34 @@
+name: Deploy React to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 🔹 Altere se o branch principal for diferente de "main"
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: node:18-alpine
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Instalar o Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Construir o projeto
+        run: npm run build
+
+      - name: Deploy para GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
