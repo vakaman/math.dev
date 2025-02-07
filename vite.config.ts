@@ -5,11 +5,11 @@ export default defineConfig({
   plugins: [react()],
   base: "/math.dev/",
   server: {
-    host: "0.0.0.0", // Permite conexões externas no Docker
+    host: "0.0.0.0",
     port: 5173,
     strictPort: true,
     watch: {
-      usePolling: true, // Necessário para hot-reload no Docker
+      usePolling: true,
     },
   },
 });
