@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import Postulado1 from "./pages/Postulado1_dois_pontos";
 import HomePage from "./pages/Home";
 
-
 function App() {
   return (
     <Routes>
