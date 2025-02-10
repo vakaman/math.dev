@@ -24,6 +24,19 @@ function HomePage() {
     <><div>
       <WhatIsPostulate />
     </div>
+
+      <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+
+        <h1>📐 Razão e Proporção</h1>
+        <p>
+          A razão é uma comparação entre dois números. A proporção é a igualdade entre duas razões.
+        </p>
+        <ul>
+          <li><Link to="/ratio_and_proportion/rule_of_three">Regra de três: Encontra um valor desconhecido entre duas proporções.</Link></li>
+        </ul>
+
+      </div>
+
       <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
         <h1>📖 Elementos de Euclides</h1>
         <p>Uma introdução aos princípios fundamentais da geometria euclidiana.</p>
