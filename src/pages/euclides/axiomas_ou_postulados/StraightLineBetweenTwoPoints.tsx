@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function Postulado1() {
+function StraightLineBetweenTwoPoints() {
   const [showFirstPoint, setShowFirstPoint] = useState(false);
   const [showSecondPoint, setShowSecondPoint] = useState(false);
   const [showLine, setShowLine] = useState(false);
@@ -13,8 +13,8 @@ function Postulado1() {
   }, []);
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif", textAlign: "center" }}>
-      <h1>Postulado 1</h1>
+    <div style={{ padding: "20px", textAlign: "center" }}>
+      <h1>Linha reta entre dois pontos</h1>
       <p>É possível traçar uma linha reta de qualquer ponto a qualquer ponto.</p>
 
       <svg width="300" height="150">
@@ -60,4 +60,4 @@ function Postulado1() {
   );
 }
 
-export default Postulado1;
+export default StraightLineBetweenTwoPoints;

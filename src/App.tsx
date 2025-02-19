@@ -1,17 +1,22 @@
 import { Routes, Route } from "react-router-dom";
-import Postulado1 from "./pages/Postulado1_dois_pontos";
 import HomePage from "./pages/Home";
-import RuleOfThree from "./pages/razao_e_proporcao/RuleOfThree";
 import Breadcrumb from "./components/Breadcrumb";
+import routes from "./routes";
+import Definitions from "./pages/euclides/axiomas_ou_postulados/Definitions";
+import ThingsEqualToTheSameThingAreAlsoEqualToEachOther from "./pages/euclides/axiomas_ou_postulados/ThingsEqualToTheSameThingAreAlsoEqualToEachOther";
+import StraightLineBetweenTwoPoints from "./pages/euclides/axiomas_ou_postulados/StraightLineBetweenTwoPoints";
+import RuleOfThree from "./pages/razao_e_proporcao/RuleOfThree";
 
 function App() {
   return (
     <div>
-      <Breadcrumb></Breadcrumb>
+      <Breadcrumb />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/postulado/1" element={<Postulado1 />} />
-        <Route path="/ratio_and_proportion/rule_of_three" element={<RuleOfThree />} />
+        <Route path={routes.home} element={<HomePage />} />
+        <Route path={routes.axiomsOrPostulates} element={<Definitions />} />
+        <Route path={routes.equalThings} element={<ThingsEqualToTheSameThingAreAlsoEqualToEachOther />} />
+        <Route path={routes.straightLineBetweenTwoPoints} element={<StraightLineBetweenTwoPoints />} />
+        <Route path={routes.ruleOfThree} element={<RuleOfThree />} />
       </Routes>
     </div>
   );

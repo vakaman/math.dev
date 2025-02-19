@@ -9,6 +9,7 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+      - /home/maicolkaiser/.ssh:/home/node/.ssh
     environment:
       - CHOKIDAR_USEPOLLING=true
     command: ["npm", "run", "dev"]
